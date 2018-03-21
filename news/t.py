@@ -17,7 +17,7 @@ def get_files(dir):
     return files
 
 
-print(get_files(r'F:\study\python\weektwo\challenge6\files'))
+# print(get_files(r'F:\study\python\weektwo\challenge6\files'))
 
 # for filename in os.listdir(r'F:\study\python\weektwo\challenge6\files'):
 #     full_path = os.path.join(r'F:\study\python\weektwo\challenge6\files', filename)
@@ -35,7 +35,20 @@ def get_title(data):
     return data.get('title')
 
 
-result = json2dic(r'F:\study\python\weektwo\challenge6\files\helloshiyanlou.json')
-print(result)
+# result = json2dic(r'F:\study\python\weektwo\challenge6\files\helloshiyanlou.json')
+# print(result)
 
-print (get_title(result))
+# print (get_title(result))
+
+#当前文件的路径
+pwd = os.getcwd()
+#当前文件的父路径
+father_path=os.path.abspath(os.path.dirname(pwd)+os.path.sep+".")
+#当前文件的前两级目录
+grader_father=os.path.abspath(os.path.dirname(pwd)+os.path.sep+"files")
+
+result = os.path.abspath(os.path.dirname(pwd)+os.path.sep)
+print(pwd)
+print(father_path)
+print(grader_father)
+print(result)
